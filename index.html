@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+</head>
+<body>
+<div id="example"></div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+
+<!-- <script src="./build/build.js"></script> -->
+<script>
+    require.config({
+        paths: {
+            'react': '//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min',
+            'react-dom': '//cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom'
+        }
+    });
+</script>
+<script src="./build/build.js"></script>
+
+<script>
+    require(["XvReact/Bootstrap"], function(bootstrap){
+        console.log(bootstrap);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "amd",
+    "target": "es6",
+    "jsx": "react",
+    "rootDir": "./src",
+    "outFile": "./build/build.js"
+  },
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
+}
