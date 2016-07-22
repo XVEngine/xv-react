@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/XVEngine/xv-react.svg?branch=master)](https://travis-ci.org/XVEngine/xv-react)
+[![Build Status](https://travis-ci.org/XVEngine/xv-react.svg?branch=master)](https://travis-ci.org/XVEngine/xv-react) [![Dependency Status](https://david-dm.org/XVEngine/xv-react.svg)](https://david-dm.org/XVEngine/xv-react) [![Coverage Status](https://coveralls.io/repos/github/XVEngine/xv-react/badge.svg?branch=master)](https://coveralls.io/github/XVEngine/xv-react?branch=master)
+
 
 # XvReact
 
