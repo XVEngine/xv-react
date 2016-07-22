@@ -15,7 +15,7 @@ if (yargs.argv.p) {
 }
 
 var config = {
-  entry: './src/Module.tsx',
+  entry: ['babel-polyfill', './src/Module.tsx'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, '/dist'),
@@ -29,7 +29,7 @@ var config = {
       { test: /\.tsx?$/, loader: 'tslint', exclude: /node_modules/ }
     ],
     loaders: [
-      { test: /\.ts(x?)$/, loaders: ["babel-loader", "ts-loader"],  exclude: /node_modules/ }
+      { test: /\.ts(x?)$/, loader: 'awesome-typescript-loader',  exclude: /node_modules/ }
     ]
   },
   resolve: {

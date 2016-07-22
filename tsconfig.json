@@ -13,6 +13,9 @@
   "exclude": [
     "node_modules"
   ],
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel" : true
+  },
   "files": [
     "./typings/index.d.ts"
   ]

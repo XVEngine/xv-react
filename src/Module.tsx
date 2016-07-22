@@ -2,7 +2,9 @@ import {Request} from './Core/Net/Request';
 import {HtmlComponent} from './Component/Utils/HtmlComponent';
 
 export var Core = {
-  'Request' : Request
+  'Net' : {
+      'Request' : Request
+  }
 };
 
 export var Component = {

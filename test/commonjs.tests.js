@@ -1,14 +1,9 @@
 var expect = require('chai').expect;
-var mylib = require('../dist/MyLib.min.js');
+var XvWeb = require('../dist/XvReact.js');
 
-describe('TestClass', function () {
+describe('XvWeb', function () {
   it('is contained within MyLib as CommonJS', function () {
-    expect(mylib).to.be.an('object');
-    expect(mylib.TestClass).to.not.be.null;
+    expect(XvWeb).to.be.an('object');
   });
-
-  it('can be instantiated', function () {
-    var t = new mylib.TestClass('foo');
-    expect(t).to.be.defined;
-  });
+  
 });
