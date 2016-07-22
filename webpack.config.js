@@ -44,8 +44,6 @@ var config = {
     failOnHint: true
   },
   externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   }
 };
 
