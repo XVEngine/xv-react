@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "declaration": false,
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "./typings/index.d.ts"
+  ]
+}

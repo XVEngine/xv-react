@@ -1,0 +1,32 @@
+{
+  "name": "example-typescript-webpack",
+  "version": "0.1.0",
+  "description": "An example Webpack deployment for using TypeScript as a library",
+  "main": "dist/MyLib.min.js",
+  "scripts": {
+    "prepublish": "webpack --debug; webpack -p"
+  },
+  "keywords": [
+    "example",
+    "typescript"
+  ],
+  "author": "Adrian Hall <adrian@shellmonger.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
+    "tslint": "^3.5.0",
+    "tslint-loader": "^2.1.0",
+    "typescript": "^1.8.2",
+    "webpack": "^1.12.14",
+    "yargs": "^4.2.0"
+  },
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  }
+}
