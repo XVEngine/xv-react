@@ -4,7 +4,6 @@
   "description": "XvReact engine core",
   "main": "dist/XvReact.min.js",
   "scripts": {
-    "build": "typings install; webpack --debug; webpack -p",
     "prepublish": "webpack --debug; webpack -p",
     "install": "typings install; webpack --debug",
     "test": "mocha"
