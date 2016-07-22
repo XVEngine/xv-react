@@ -17,6 +17,7 @@ node_js:
 
 
 before_install:
+  - npm install --save glob
   - npm install -g mocha
   - npm install -g typings
 
