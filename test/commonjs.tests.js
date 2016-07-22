@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var XvReact = require('../dist/XvReact.js');
+var XvReact = require('../dist/XvReact.min.js');
 
 describe('XvReact', function () {
   it('is contained within XvReact as CommonJS', function () {
