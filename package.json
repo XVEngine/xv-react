@@ -1,6 +1,6 @@
 {
   "name": "xv-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "XvReact engine core",
   "main": "dist/XvReact.min.js",
   "scripts": {
