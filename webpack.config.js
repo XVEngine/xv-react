@@ -15,7 +15,11 @@ if (yargs.argv.p) {
 }
 
 var config = {
-  entry: ['babel-polyfill', './src/Module.tsx'],
+  entry: [
+      'babel-polyfill',
+      'whatwg-fetch',
+    './src/Module.tsx'
+  ],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, '/dist'),

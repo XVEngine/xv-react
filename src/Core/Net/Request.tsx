@@ -1,6 +1,8 @@
 import URI = require('urijs');
+import URITemplate = require('urijs/src/URITemplate');
 import Collections = require('typescript-collections');
 
+declare var global: any;
 
 /**
  *
@@ -89,7 +91,6 @@ export class Request {
             data.append(k, v);
         });
 
-
         let requestParameters = {
             'method': this._post.size ? 'POST' : 'GET',
             'headers': headers,
@@ -102,9 +103,11 @@ export class Request {
             parameters[k] = v;
         });
 
-        let urlUri = URI.expand(this.url, parameters);
+        let template : any = URITemplate;
 
-        urlUri.search((data: any) => {
+        let urlUri = template(this.url)
+            .expand(parameters)
+            .search((data: any) => {
             this._get.forEach((k:string, v:any) => {
                 data[k] = v;
             });
@@ -112,9 +115,11 @@ export class Request {
 
 
 
-        let req = new Request(urlUri.toString(), requestParameters);
+        let env = (typeof global !== 'undefined') ? global : window;
 
-        return await fetch(req);
+        return await fetch(
+            new env.Request(urlUri.toString(), requestParameters)
+        );
     }
 
 }
