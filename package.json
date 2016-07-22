@@ -1,18 +1,26 @@
 {
-  "name": "example-typescript-webpack",
-  "version": "0.1.0",
-  "description": "An example Webpack deployment for using TypeScript as a library",
-  "main": "dist/MyLib.min.js",
+  "name": "xv-core",
+  "version": "0.0.1",
+  "description": "XvReact engine core",
+  "main": "dist/XvReact.min.js",
   "scripts": {
     "prepublish": "webpack --debug; webpack -p",
     "install": "typings install; webpack --debug"
   },
   "keywords": [
-    "example",
-    "typescript"
+    "xvreact",
+    "xv-core",
+    "react"
   ],
-  "author": "Adrian Hall <adrian@shellmonger.com>",
+  "author": "Krzysztof Bednarczyk <krzysztof@bednarczyk.me>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XVEngine/xv-react"
+  },
+  "bugs": {
+    "url": "https://github.com/XVEngine/xv-react/issues"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^2.1.0",
     "babel-cli": "^6.11.4",
