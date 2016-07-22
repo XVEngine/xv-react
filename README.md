@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/XVEngine/xv-react.svg?branch=master)](https://travis-ci.org/XVEngine/xv-react) [![Dependency Status](https://david-dm.org/XVEngine/xv-react.svg)](https://david-dm.org/XVEngine/xv-react) [![Coverage Status](https://coveralls.io/repos/github/XVEngine/xv-react/badge.svg?branch=master)](https://coveralls.io/github/XVEngine/xv-react?branch=master)
+[![Build Status](https://travis-ci.org/XVEngine/xv-react.svg?branch=master)](https://travis-ci.org/XVEngine/xv-react) [![Dependency Status](https://david-dm.org/XVEngine/xv-react.svg)](https://david-dm.org/XVEngine/xv-react) [![Coverage Status](https://coveralls.io/repos/github/XVEngine/xv-react/badge.svg?branch=master)](https://coveralls.io/github/XVEngine/xv-react?branch=master) [![npm version](https://img.shields.io/npm/v/xv-core.svg?style=flat)](https://www.npmjs.com/package/xv-core) 
 
 
 # XvReact
