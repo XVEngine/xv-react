@@ -1,9 +1,15 @@
 var expect = require('chai').expect;
-var XvWeb = require('../dist/XvReact.js');
+var XvReact = require('../dist/XvReact.js');
 
-describe('XvWeb', function () {
-  it('is contained within MyLib as CommonJS', function () {
-    expect(XvWeb).to.be.an('object');
+describe('XvReact', function () {
+  it('is contained within XvReact as CommonJS', function () {
+    expect(XvReact).to.be.an('object');
   });
+
+  it('XvReact contained basic namespaces', function () {
+    expect(XvReact.Core).to.be.an('object');
+    expect(XvReact.Core.Net.Request).to.be.an('function');
+  });
+
 
 });
