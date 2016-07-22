@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/XVEngine/xv-react.svg?branch=master)](https://travis-ci.org/XVEngine/xv-react)
+
 # XvReact
 
 ToDo
