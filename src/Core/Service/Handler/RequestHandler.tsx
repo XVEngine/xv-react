@@ -1,6 +1,6 @@
-import {AbstractHandler} from './AbstractHandler';
+import {HandlerInterface} from './HandlerInterface';
 
-export class RequestHandler extends AbstractHandler{
+export class RequestHandler implements HandlerInterface{
 
     public async execute(parameters : any){
 

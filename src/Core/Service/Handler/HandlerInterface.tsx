@@ -1,3 +1,3 @@
 export interface HandlerInterface {
-    execute(): any;
+    execute(parameters : any): any;
 }

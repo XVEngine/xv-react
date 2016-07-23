@@ -4,19 +4,21 @@ import Collections = require('typescript-collections');
 
 export class Container {
 
-    protected parameters  = new Collections.Dictionary<string, any>();
+    protected parameters = new Collections.Dictionary<string, any>();
 
-    protected services  = new Collections.Dictionary<string, ServiceRegisterInterface>();
+    protected services = new Collections.Dictionary<string, ServiceRegisterInterface>();
+
+    protected serviceInstances = new Collections.Dictionary<string, any>();
 
     /**
      *
      * @param service
      * @returns {Container}
      */
-    public registerService(service: ServiceRegisterInterface){
+    public registerService(service:ServiceRegisterInterface) {
 
         this.services.setValue(
-            service.name,
+            (service.name as string).toLowerCase(),
             service
         );
 
@@ -24,9 +26,15 @@ export class Container {
     }
 
 
-    public async getService(name : string){
+    public async getService(name : string) {
 
-        return '';
+        if(!this.hasService(name)){
+            throw new Error(); //@todo
+        }
+
+        return this.getServiceInstance(
+            this.services.getValue(name.toLowerCase())
+        );
     }
 
     /**
@@ -34,8 +42,8 @@ export class Container {
      * @param name
      * @returns {boolean}
      */
-    public hasService(name : string) : boolean{
-        return this.services.containsKey(name);
+    public hasService(name:string):boolean {
+        return this.services.containsKey(name.toLowerCase());
     }
 
 
@@ -45,15 +53,15 @@ export class Container {
      * @param value
      * @returns {Container}
      */
-    public registerParameter(name : string, value : any){
+    public registerParameter(name:string, value:any) {
         this.parameters.setValue(name, value);
 
         return this;
     }
 
 
-    public getParameter(name : string){
-        if(!this.parameters.containsKey(name)){
+    public getParameter(name:string) {
+        if (!this.parameters.containsKey(name)) {
 
         }
 
@@ -65,8 +73,34 @@ export class Container {
      * @param tagName
      * @returns {Array}
      */
-    public getTaggedServices(tagName : string) : any[]{
+    public getTaggedServicesNames(tagName:string) : string[] {
+        let result : string[] = [];
+        this.services.forEach((key : string, v : ServiceRegisterInterface) => {
+            if(v.tags && v.tags.indexOf(tagName)){
+                result.push(key as string);
+            }
+        });
 
-        return [];
+        return result;
+    }
+
+
+    /**
+     *
+     * @param service
+     * @returns {any}
+     */
+    protected async getServiceInstance(service:ServiceRegisterInterface) {
+        if (this.serviceInstances.containsKey(service.name.toLowerCase())) {
+            return this.serviceInstances.getValue(service.name.toLowerCase());
+        }
+
+        let instance = await service.factory(this);
+        this.serviceInstances.setValue(
+            service.name.toLowerCase(),
+            instance
+        );
+
+        return instance;
     }
 }

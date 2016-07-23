@@ -4,9 +4,9 @@
   "description": "XvReact engine core",
   "main": "dist/XvReact.min.js",
   "scripts": {
-    "prepublish": "webpack --debug; webpack -p",
-    "install": "webpack --debug; webpack -p",
-    "test": "mocha"
+    "prepublish": "webpack && webpack -p",
+    "install": "webpack && webpack -p",
+    "test": "webpack -p && mocha"
   },
   "keywords": [
     "xvreact",
