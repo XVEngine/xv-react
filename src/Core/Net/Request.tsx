@@ -1,6 +1,6 @@
 import URI = require('urijs');
 import URITemplate = require('urijs/src/URITemplate');
-import Collections = require('typescript-collections');
+import {Dictionary} from '../Utils/Collection/Dictionary';
 
 declare var global: any;
 
@@ -15,10 +15,10 @@ export class Request {
     protected url:string;
 
 
-    protected _post = new Collections.Dictionary<string, any>();
-    protected _get = new Collections.Dictionary<string, any>();
-    protected _header = new Collections.Dictionary<string, string>();
-    protected _parameters = new Collections.Dictionary<string, string>();
+    protected _post = new Dictionary<any>();
+    protected _get = new Dictionary<any>();
+    protected _header = new Dictionary<string>();
+    protected _parameters = new Dictionary<string>();
 
     /**
      *

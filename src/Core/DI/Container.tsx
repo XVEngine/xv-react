@@ -1,14 +1,14 @@
 import {ServiceRegisterInterface} from './ServiceRegisterInterface';
-import Collections = require('typescript-collections');
+import {Dictionary} from './../Utils/Collection/Dictionary'
 
 
 export class Container {
 
-    protected parameters = new Collections.Dictionary<string, any>();
+    protected parameters = new Dictionary<any>();
 
-    protected services = new Collections.Dictionary<string, ServiceRegisterInterface>();
+    protected services = new Dictionary<ServiceRegisterInterface>();
 
-    protected serviceInstances = new Collections.Dictionary<string, any>();
+    protected serviceInstances = new Dictionary<any>();
 
     /**
      *
@@ -43,7 +43,7 @@ export class Container {
      * @returns {boolean}
      */
     public hasService(name:string):boolean {
-        return this.services.containsKey(name.toLowerCase());
+        return this.services.hasKey(name.toLowerCase());
     }
 
 
@@ -61,7 +61,7 @@ export class Container {
 
 
     public getParameter(name:string) {
-        if (!this.parameters.containsKey(name)) {
+        if (!this.parameters.hasKey(name)) {
 
         }
 
@@ -91,7 +91,7 @@ export class Container {
      * @returns {any}
      */
     protected async getServiceInstance(service:ServiceRegisterInterface) {
-        if (this.serviceInstances.containsKey(service.name.toLowerCase())) {
+        if (this.serviceInstances.hasKey(service.name.toLowerCase())) {
             return this.serviceInstances.getValue(service.name.toLowerCase());
         }
 
