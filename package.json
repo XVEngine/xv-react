@@ -5,7 +5,7 @@
   "main": "dist/XvReact.min.js",
   "scripts": {
     "prepublish": "webpack --debug; webpack -p",
-    "install": "typings install; webpack --debug; webpack -p",
+    "install": "webpack --debug; webpack -p",
     "test": "mocha"
   },
   "keywords": [

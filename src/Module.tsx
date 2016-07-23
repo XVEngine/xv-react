@@ -2,6 +2,7 @@ import {Request} from './Core/Net/Request';
 import {AbstractComponent} from './Core/Component/AbstractComponent';
 import {AbstractEmitter} from './Core/Component/AbstractEmitter';
 import {HtmlComponent} from './Component/Utils/HtmlComponent';
+import {container as ContainerFunction} from './Core/Container';
 
 export var Core = {
     'Component': {
@@ -18,3 +19,5 @@ export var Component = {
         'HtmlComponent': HtmlComponent
     }
 };
+
+export var Container = ContainerFunction;

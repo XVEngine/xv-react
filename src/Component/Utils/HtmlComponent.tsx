@@ -8,3 +8,4 @@ export class HtmlComponent extends React.Component<HtmlComponentProps, {}> {
         return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
     }
 }
+
